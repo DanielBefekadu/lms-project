@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS Student Registration</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.png"/>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="form-container">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="LMS Logo" />
+      </div>
+
+      <h1>Student Registration</h1>
+      <p class="subtitle">Create your LMS account</p>
+
+      <form action="register.php" method="post">
+        <!-- Name Row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter first name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter last name" required />
+          </div>
+        </div>
+
+        <!-- Email and Password -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          </div>
+        </div>
+
+        <!-- Gender and Date of Birth -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+        <p class="login-text">Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
