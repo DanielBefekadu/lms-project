@@ -32,7 +32,7 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/lms-app:${TAG}
 
       - name: Delete older images, keep last 3
-        uses: dylanratcliffe/dockerhub-cleanup-action@v2
+        uses: dylanratcliffe/dockerhub-cleanup-action@v2.2.0
         with:
           keep-last: 3
           user: ${{ secrets.DOCKERHUB_USERNAME }}
