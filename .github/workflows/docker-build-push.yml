@@ -47,7 +47,7 @@ jobs:
     needs: build-and-push
     steps:
       - name: Delete old tags (keep newest 3)
-        uses: snok/container-retention-policy@v3
+        uses: snok/container-retention-policy@v2
         with:
           account: ${{ secrets.DOCKERHUB_USERNAME }}
           # Use the DOCKERHUB_PASSWORD secret (which should be a PAT) for authentication
