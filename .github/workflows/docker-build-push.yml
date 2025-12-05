@@ -21,12 +21,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      # 3️⃣ Build the Docker image
+          # 3️⃣ Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/lms-app:latest .
+          DATE_TAG=$(date +'%Y%m%d%H%M%S')
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/lms-app:$DATE_TAG .
 
       # 4️⃣ Push the Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/lms-app:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/lms-app:$DATE_TAG
